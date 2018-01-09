@@ -1,10 +1,15 @@
 <template>
-  <head-top></head-top>
+  <div>
+    <head-top></head-top>
+    <self-footer></self-footer>
+  </div>
 </template>
 
 <script>
 import '@/assets/css/base.css';
-import HeadTop from '@/components/head-top';
+import HeadTop from '@/components/head-top.vue';
+import SelfFooter from '@/components/Footer.vue';
+
 export default {
   props: {
 
@@ -14,7 +19,8 @@ export default {
     };
   },
   components: {
-    HeadTop
+    HeadTop,
+    SelfFooter
   }
 };
 </script>

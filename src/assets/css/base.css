@@ -215,7 +215,7 @@ table {
 .clearfix:after {
   visibility: hidden;
   display: block;
-  content: " ";
+  content: "";
   clear: both;
 }
 
