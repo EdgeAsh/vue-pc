@@ -33,7 +33,7 @@
         a(@click='login') 登录
         span(style='padding:0 4px') |
         a(@click='register') 注册
-    a.self(v-if="isLogin", @mouseenter='', @mouseleave='')
+    a.self(v-if="isLogin")
       div.self-avatar
         img(src='http://1.img.dianjiangla.com/assets/user.png')
       div.self-info(ref='self_info')
@@ -55,7 +55,7 @@ export default {
   },
   data() {
     return {
-      isLogin: false,
+      isLogin: true,
       type: ['设计师', '作品'],
       typeIndex: 0
     };

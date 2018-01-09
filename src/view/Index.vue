@@ -2,6 +2,7 @@
   <div>
     <head-top></head-top>
     <self-footer></self-footer>
+    <float-nav></float-nav>
   </div>
 </template>
 
@@ -9,6 +10,7 @@
 import '@/assets/css/base.css';
 import HeadTop from '@/components/head-top.vue';
 import SelfFooter from '@/components/Footer.vue';
+import FloatNav from '@/components/FloatNav.vue';
 
 export default {
   props: {
@@ -20,7 +22,8 @@ export default {
   },
   components: {
     HeadTop,
-    SelfFooter
+    SelfFooter,
+    FloatNav
   }
 };
 </script>
