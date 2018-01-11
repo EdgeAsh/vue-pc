@@ -183,6 +183,7 @@ input
             margin-top: -2px
             background: #fff
             border-radius: 0px 0px 4px 4px
+            z-index: 10
 
             .item
               line-height: 30px
@@ -256,6 +257,8 @@ input
       font-size: $font14
       color: $font-c1
       border: $border
+      z-index: 10
+      background: #fff
 
       .info-item
         display: block
