@@ -43,7 +43,7 @@
 
                 <div class="over-hid btn-group" style="border: none;overflow: visible;background: #fff;">
                     <div class="input"><input id="telcode" name="telcode" type="text" placeholder="输入6位动态码" maxlength="6"></div>
-                    <a id="telcode-btn" class="btn rtn">获取验证码</a>
+                    <a ref="telcode-btn" class="btn rtn" @click='getCode'>获取验证码</a>
                 </div>
                 <div class="verify-tishi"><label class="error" for="telcode" id="msg-telcode"></label></div>
                 <div class="regremark">
@@ -59,13 +59,12 @@
                 <!-- <input onclick="submitHandle(3)" class="btn" style="margin-top:11px;width: 45%;float: right;" value="设计师注册"> -->
                 <input type="submit" id="reg-btn" class="btn btn-login" value="注 册">
                 </div>
-                <p class="zc">已有账号？<a href="http://www.dianjiangla.com/user/login">立即登录</a></p>
+                <p class="zc">已有账号？<router-link to='/login'>立即登录</router-link></p>
               </div>
             </form>
         </div>
     </div>
   </div>
-  <SelfFooter></SelfFooter>
 </div>
 </template>
 
@@ -77,6 +76,7 @@ import '@/assets/css/user.css';
 登录注册流程：
   1，在本地检验合法性
   2，提交数据
+  3, 根据返回的数据，跳转页面
 */
 export default {
   props: {
@@ -131,11 +131,32 @@ export default {
         checkPwd: [
         { validator: validateCheckPwd, trigger: 'blur' }
         ]
-      }
+      },
+      codeBtnAvaliable: true
     };
   },
   components: {
     SelfFooter
+  },
+  methods: {
+    getCode(event) { // 获取验证码，设置interval倒计时
+      // 判断按钮是否可用
+      let that = this;
+      if (!that.codeBtnAvaliable) return;
+      that.codeBtnAvaliable = false;
+      let btn = event.target;
+      let time = 60;
+      let timer = setInterval(function () {
+        time--;
+        btn.innerHTML = `${time}秒后重新获取`;
+        if (time <= 0) {
+          clearInterval(timer);
+          btn.innerHTML = '获取验证码';
+          that.codeBtnAvaliable = true;
+        }
+      }, 1000);
+      console.log(event, '这个是什么');
+    }
   }
 };
 </script>

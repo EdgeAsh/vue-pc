@@ -1,5 +1,6 @@
 <template lang='pug'>
   <div>
+    head-top
     //- 轮播图
     div.banner
       banner(:imgList='imgList')
@@ -75,6 +76,7 @@
 </template>
 
 <script>
+import HeadTop from '@/components/head-top.vue';
 import Banner from '@/components/Banner.vue';
 import axios from 'axios';
 
@@ -102,7 +104,8 @@ export default {
     });
   },
   components: {
-    Banner
+    Banner,
+    HeadTop
   }
 };
 </script>

@@ -1,4 +1,5 @@
 /** 登录、注册、找回密码 相关*/
+.over-hid{overflow: hidden}
 .hid{display: none}
 .login{margin-bottom: 175px;width: 100%;min-width: 1280px;height:516px;background: url('http://www.dianjiangla.com/pub/images/loginbg.png') center;color: #666;}
 .login .login-right{float: right;width: 350px;min-height: 500px;background-color:#fff;border-radius:8px;margin-top: 105px;margin-right: 30px;border: 1px solid #999;}
@@ -6,7 +7,7 @@
 .login .login-logo{width:54px;height:54px;text-align:center;margin: auto;margin-top: 32px;}
 .login .title{/**height: 40px; line-height: 40px;*/padding: 42px 0 20px; font-size: 20px;text-align: center;color: #333;}
 .login .hr{height: 15px; border-bottom: 1px solid #999;margin: auto;}
-.login .login-input{height: 30px;line-height: 30px;border: 1px solid #999;border-radius:4px;margin: auto;}
+.login .login-input{height: 34px;line-height: 30px;border: 1px solid #999;border-radius:4px;margin: auto;}
 .login .login-input div{float: left;}
 .login .login-input div.icon{width: 24px;height: 30px;overflow: hidden;_zoom:1;background-color: #f4f4f4;border-right: 1px solid #bbb;}
 .login .login-input div.input{width: 250px;}
@@ -35,7 +36,7 @@
 .reg .regremark label a{color: #c20c0c; }
 
 /** 修改密码 */
-.login.edit{background: url('/pub/images/fainbg.png') center;}
+.login.edit{background: url('http://www.dianjiangla.com/pub/images/fainbg.png') center;}
 .login.edit .login-right{height: 377px;margin-top: 69px;}
 .login.edit .login-input div.input,.login.edit .login-input div.input input{width: 312px;}
 /*.login .btn-group{margin-top: 8px;}*/
@@ -44,7 +45,7 @@
 .login .btn-group a.rtn{background-color: #fff;color: #bbb;float: right;border: 1px solid #bbb;}
 
 /** 找回密码 */
-.login.fainpwd {background: url('/pub/images/fainbg.png') center;}
+.login.fainpwd {background: url('http://www.dianjiangla.com/pub/images/fainbg.png') center;}
 /* .login.fainpwd .login-right{height: 431px;margin-top: 43px;} */
 .login.fainpwd .login-input div.input,.login.fainpwd .login-input div.input input{width: 100%;}
 .login.fainpwd .input-group {}

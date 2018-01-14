@@ -1,12 +1,10 @@
 <template>
   <div>
-    <!-- 头部 -->
-    <!-- <head-top></head-top> -->
     <router-view></router-view>
     <!-- 底部 -->
-    <!-- <self-footer></self-footer> -->
+    <self-footer></self-footer>
     <!-- 右侧固定悬浮 -->
-    <!-- <float-nav></float-nav> -->
+    <float-nav></float-nav>
   </div>
 </template>
 
