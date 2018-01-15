@@ -1,0 +1,91 @@
+/** 登录、注册、找回密码 相关*/
+.hid{display: none}
+.login{margin-bottom: 175px;width: 100%;min-width: 1280px;height:516px;background: url('http://www.dianjiangla.com/pub/images/loginbg.png') center;color: #666;}
+.login .login-right{float: right;width: 350px;min-height: 500px;background-color:#fff;border-radius:8px;margin-top: 105px;margin-right: 30px;border: 1px solid #999;}
+.login .content{width: 278px; margin: auto;}
+.login .login-logo{width:54px;height:54px;text-align:center;margin: auto;margin-top: 32px;}
+.login .title{/**height: 40px; line-height: 40px;*/padding: 42px 0 20px; font-size: 20px;text-align: center;color: #333;}
+.login .hr{height: 15px; border-bottom: 1px solid #999;margin: auto;}
+.login .login-input{height: 30px;line-height: 30px;border: 1px solid #999;border-radius:4px;margin: auto;}
+.login .login-input div{float: left;}
+.login .login-input div.icon{width: 24px;height: 30px;overflow: hidden;_zoom:1;background-color: #f4f4f4;border-right: 1px solid #bbb;}
+.login .login-input div.input{width: 250px;}
+.login .login-input div.input input{width: 100%;height: 30px;border: none;text-indent: 10px;font-size: 12px;}
+.login .next{width: 100%;overflow: hidden;}
+.login .next div.checkbox{float: left;width: 150px;height: 19px;margin-top: 5px;}
+.login .next div.checkbox input{margin-right: 7px;}
+.login .next a{display: block;width:80px; height:33px;line-height:33px;text-align:right;float: right;color: #c20c0c;font-size: 14px;}
+.login a.btn{display:block;width: 314px;height: 43px;line-height: 43px;background-color:#f54203;border-radius:4px;text-align: center;color: #fff;margin-top: 11px;font-size: 16px;}
+.login input.btn{width: 314px;height: 43px;line-height: 43px;background-color:#f54203;border-radius:4px;text-align: center;color: #fff;font-size: 16px;border: none;cursor: pointer;}
+.login input.btn[disabled]{ cursor: not-allowed; background-color: #bbbec4;}
+.login .zc{ text-align: center;margin-top: 22px;height: 30px;line-height: 30px;font-size: 14px;color: #999;}
+.login .zc a{color: #c20c0c;margin-left: 31px; }
+
+/* 新增 */
+.login .verify-tishi{min-height: 15px;height: auto;line-height: 15px;margin: 3px 0 9px;}
+.login .auto-login{color: #333; font-size: 14px;}
+.login .login-type{overflow: hidden;}
+.login .login-type .btn{width: 134px;height: 30px;line-height: 30px;font-size: 14px;color: #c20c0c;border: 1px solid #c20c0c;background: transparent;}
+.login .login-type .btn.ac{color: #fff; background: #c20c0c;}
+.login .login-type .btn.btn-employer{float: left;}
+.login .login-type .btn.btn-designer{float: right;}
+.login input.btn-login{font-size: 18px; color: #fff; background: #c20c0c; border-radius: 4px;width: 100%;height: 35px;line-height: 35px;}
+.login .btn-back{text-align: center;display: block;color: #999;font-size: 14px;margin-top: 22px;}
+
+.reg .regremark label a{color: #c20c0c; }
+
+/** 修改密码 */
+.login.edit{background: url('/pub/images/fainbg.png') center;}
+.login.edit .login-right{height: 377px;margin-top: 69px;}
+.login.edit .login-input div.input,.login.edit .login-input div.input input{width: 312px;}
+/*.login .btn-group{margin-top: 8px;}*/
+.login .btn-group input.btn{margin-top: 0px;}
+.login .btn-group a.btn{width: 150px;float: left;margin-top: 0px;}
+.login .btn-group a.rtn{background-color: #fff;color: #bbb;float: right;border: 1px solid #bbb;}
+
+/** 找回密码 */
+.login.fainpwd {background: url('/pub/images/fainbg.png') center;}
+/* .login.fainpwd .login-right{height: 431px;margin-top: 43px;} */
+.login.fainpwd .login-input div.input,.login.fainpwd .login-input div.input input{width: 100%;}
+.login.fainpwd .input-group {}
+.login.fainpwd .input-group .input{width: 165px;height: 31px; border: 1px solid #999;border-radius:4px;float: left;}
+.login.fainpwd .input-group .input input{width: 100%;height: 100%;border: none;border-radius:4px;text-indent: 10px;display: block;}
+.login.fainpwd .input-group .yzm{width: 99px;float: right;border-radius: 4px;height: 33px;}
+.login.fainpwd .input-group .yzm img{width: 99px;height: 33px;}
+.login.fainpwd .btn-group{height:33px;border-radius:4px;background-color: #fff;}
+.login.fainpwd .btn-group .input{width: 165px;height: 33px;float: left;}
+.login.fainpwd .btn-group .input input{width: 100%;height: 31px;border: 1px solid #999;border-radius: 4px;text-indent: 10px;}
+.login.fainpwd .btn-group a.rtn{ width: 103px;height: 31px;background-color: transparent;line-height: 31px;margin: 0;border: 1px solid #c20c0c;border-radius: 4px;float: right; color: #c20c0c}
+.login.fainpwd a.btn{margin-top: 20px;}
+.login.fainpwd .input-group.hidden{display: none;}
+
+/* 新增 */
+.login.fainpwd .btn-next,.login.edit .btn-reset{font-size: 18px; color: #fff; background: #c20c0c; border-radius: 4px;width: 100%;height: 35px;line-height: 35px;}
+
+.login.fainpwd .btn-group a.rtn.primary{}
+/* .login.fainpwd .btn-group a.rtn.primary[disabled]{cursor: not-allowed;background-color: transparent;font-size: 13px;} */
+
+/** 注册 */
+/* .login.zhuce .login-right{height: 489px;margin-top: 13px;} */
+.login.zhuce .btn-group{height:33px;border-radius:4px;background-color: #f4f4f4;}
+.login.zhuce .btn-group .input{width: 165px;height: 33px;float: left;}
+.login.zhuce .btn-group .input input{width: 100%;height: 31px;border: 1px solid #999;border-radius: 4px;text-indent: 10px;}
+.login.zhuce .btn-group a.rtn{background-color: transparent; color: #c20c0c; width: 103px;height: 31px;line-height: 33px;margin: 0;
+    border: none;border-radius: 0;   border: 1px solid #c20c0c;float: right;  border-radius: 4px;font-size: 14px;}
+.login.zhuce .btn-group a.rtn{margin-top: 0px}
+
+/* .login.zhuce .btn-group a.djs{background-color: #f4f4f4; color: #bbb;border: 1px solid #c20c0c; font-size: 13px;} */
+
+.login.zhuce .next div.checkbox{width: 314px;float: none;}
+.login.zhuce .login-logo{margin-top: 26px;}
+.login.zhuce .input-group {height: 35px;line-height: 33px;}
+.login.zhuce .input-group .input{width: 165px;height: 31px; border: 1px solid #bbb;border-radius:4px;float: left;}
+.login.zhuce .input-group .input input{width: 100%;height: 100%;border: none;border-radius:4px;text-indent: 10px;display: block;}
+.login.zhuce .input-group .yzm{width: 99px;float: right;border-radius: 4px;height: 100%;}
+.login.zhuce .input-group .yzm img{width: 99px;height: 33px;}
+/* .login.zhuce .login-input{height: 33px;line-height: 33px;border: 1px solid #bbb;border-radius:4px;margin: auto;} */
+.login.zhuce .login-input div{float: left;}
+/* .login.zhuce .login-input div.icon{width: 33px;height: 33px;overflow: hidden;_zoom:1;background-color: #f4f4f4;border-right: 1px solid #bbb;} */
+/* .login.zhuce .login-input div.input{width: 265px;} */
+/* .login.zhuce .login-input div.input input{width: 270px;height: 32px;border: none;text-indent: 14px;} */
+/* .login.zhuce .zc{margin-top: 0px;} */
