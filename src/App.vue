@@ -10,7 +10,6 @@
 
 <script>
 import '@/assets/css/base.css';
-import HeadTop from '@/components/head-top.vue';
 import SelfFooter from '@/components/Footer.vue';
 import FloatNav from '@/components/FloatNav.vue';
 
@@ -25,7 +24,6 @@ export default {
   created() {
   },
   components: {
-    HeadTop,
     SelfFooter,
     FloatNav
   }
