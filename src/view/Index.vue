@@ -104,8 +104,8 @@ export default {
     });
   },
   components: {
-    Banner,
-    HeadTop
+    HeadTop,
+    Banner
   }
 };
 </script>
