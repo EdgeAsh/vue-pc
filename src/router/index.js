@@ -5,6 +5,7 @@ import Register from '@/view/register.vue';
 import Login from '@/view/login.vue';
 import FindPwd from '@/view/findPwd.vue';
 import ResetPwd from '@/view/resetPwd.vue';
+import test from '@/view/test.vue';
 
 Vue.use(Router);
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/resetpwd',
       name: 'resetpwd',
       component: ResetPwd
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: test
     }
   ]
 });

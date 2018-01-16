@@ -50,14 +50,15 @@ export default {
   mounted(le) {
     // 获取路由参数
     let {phone, code} = this.$route.query;
-    console.log(le, 'mounted', this.$route.query);
+    console.log(le, 'mounted', this.$route.query, phone, code);
   },
   methods: {
     async reset() {
       // 拿到东西去请求，然后跳转到登录页面
-      // let {phone, code} = this.$route.query;
-      // let pwd = this.pwd;
-      // let res = await axios({url: 'www.baidu.com', data: {phone,code,pwd}});
+      let {phone, code} = this.$route.query;
+      let pwd = this.pwd;
+      let res = await axios({url: '/api/auth/password/forget', method: 'POST', data: {phone, code, pwd}});
+      console.log(res);
       // 路由舔砖
       this.$router.push('/login');
     }

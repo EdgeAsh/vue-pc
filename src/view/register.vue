@@ -10,7 +10,7 @@
   <div class="login reg zhuce">
     <div class="main verify">
       <div class="login-right">
-            <form id="form1" method="post" novalidate="novalidate" autocomplete="off">
+            <form id="form1" method="post" novalidate="novalidate" autocomplete="off" disabled>
               <div class="content over-hid">
                 <!-- <div class="over-hid login-logo"><img src="/pub/images/min-logo.png"></div> -->
                 <p class="title">注&nbsp;&nbsp;册</p>
@@ -57,7 +57,7 @@
                 <div style="width: 100%;overflow: hidden;margin-top: 15px;">
                 <!-- <input onclick="submitHandle(1)" id="reg-btn" class="btn" style="margin-top:11px;width: 45%;float: left;" value="雇主注册"> -->
                 <!-- <input onclick="submitHandle(3)" class="btn" style="margin-top:11px;width: 45%;float: right;" value="设计师注册"> -->
-                <input type="submit" id="reg-btn" class="btn btn-login" value="注 册">
+                <input type="button" id="reg-btn" class="btn btn-login" value="注 册" @click='regist'>
                 </div>
                 <p class="zc">已有账号？<router-link to='/login'>立即登录</router-link></p>
               </div>
@@ -72,6 +72,7 @@
 <script>
 import SelfFooter from '@/components/Footer.vue';
 import '@/assets/css/user.css';
+import axios from 'axios';
 /*
 登录注册流程：
   1，在本地检验合法性
@@ -139,23 +140,30 @@ export default {
     SelfFooter
   },
   methods: {
-    getCode(event) { // 获取验证码，设置interval倒计时
+    regist(event) { // 获取验证码，设置interval倒计时
       // 判断按钮是否可用
-      let that = this;
-      if (!that.codeBtnAvaliable) return;
-      that.codeBtnAvaliable = false;
-      let btn = event.target;
-      let time = 60;
-      let timer = setInterval(function () {
-        time--;
-        btn.innerHTML = `${time}秒后重新获取`;
-        if (time <= 0) {
-          clearInterval(timer);
-          btn.innerHTML = '获取验证码';
-          that.codeBtnAvaliable = true;
-        }
-      }, 1000);
-      console.log(event, '这个是什么');
+      // let that = this;
+      // if (!that.codeBtnAvaliable) return;
+      // that.codeBtnAvaliable = false;
+      // let btn = event.target;
+      // let time = 60;
+      // let timer = setInterval(function () {
+      //   time--;
+      //   btn.innerHTML = `${time}秒后重新获取`;
+      //   if (time <= 0) {
+      //     clearInterval(timer);
+      //     btn.innerHTML = '获取验证码';
+      //     that.codeBtnAvaliable = true;
+      //   }
+      // }, 1000);
+      // console.log(event, '这个是什么');
+      axios({
+        url: '/api/auth/register',
+        method: 'POST',
+        data: {username: 'Edge', phone: '18055947523', password: '123456', code: '123456'}
+      }).then((res) => {
+        console.log('请求的响应', res.data);
+      });
     }
   }
 };
